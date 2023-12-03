@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Onde você está?</h1>
+    País <input type="text" name="Pais" id="pais">
+    <input type="button" value="Verificar" onclick="ver()">
+    <div id="res">
+        Resultado
+    </div>
+
+
+    <script>
+    function ver(){
+        var p = window.document.getElementById('pais')
+        var res = window.document.getElementById('res')
+        pi = p.value
+        res.innerHTML = ('Você está em ' + pi)
+        if(pi == 'Brasil'){
+            res.innerHTML += ("</br> Você é Brasileiro")
+        }else{
+            res.innerHTML += ('</br> Você é Estrangeiro')
+        }
+    }
+        
+    </script>
+</body>
+</html>
